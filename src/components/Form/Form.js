@@ -83,6 +83,8 @@ const Form = ({ currentId, setCurrentId }) => {
           variant="outlined"
           label="Message"
           multiline
+          minRows={4}
+          maxRows={10}
           fullWidth
           value={postData.message}
           onChange={(e) =>

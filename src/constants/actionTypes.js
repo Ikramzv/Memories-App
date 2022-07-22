@@ -1,12 +1,14 @@
 const CREATE = "CREATE";
 const DELETE = "DELETE";
 const FETCH_ALL = "FETCH_ALL";
+const FETCH_BY_SEARCH = "FETCH_BY_SEARCH";
 const LIKE = "LIKE";
 const UPDATE = "UPDATE";
 const SET_LOADING = "SET_LOADING";
 const SET_USER = "SET_USER";
 const AUTH = "AUTH";
 const LOGOUT = "LOGOUT";
+const SET_TOKENS = "SET_TOKENS";
 
 export {
   CREATE,
@@ -18,4 +20,6 @@ export {
   SET_USER,
   AUTH,
   LOGOUT,
+  SET_TOKENS,
+  FETCH_BY_SEARCH,
 };

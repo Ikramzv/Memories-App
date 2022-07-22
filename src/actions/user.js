@@ -1,5 +1,5 @@
-import { registerUser, signIN } from "../api";
-import { SET_USER } from "../constants/actionTypes";
+import { registerUser, signIN, userLogOut } from "../api";
+import { LOGOUT, SET_USER } from "../constants/actionTypes";
 
 export const register = (newUser) => async (dispatch) => {
   const { data } = await registerUser(newUser);
@@ -26,5 +26,16 @@ export const signIn = (userData) => async (dispatch) => {
   } catch (err) {
     console.log(err);
     alert("Email or Password are no valid");
+  }
+};
+
+export const logOut = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: LOGOUT,
+    });
+    return await userLogOut();
+  } catch (err) {
+    console.log(err);
   }
 };

@@ -5,8 +5,12 @@ export default makeStyles((theme) => ({
   AppBar: {
     borderRadius: 15,
     margin: "30px 0",
-    display: "flex",
+    display: "flex !important",
     flexDirection: "row !important",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column !important",
+      padding: "10px 20px !important",
+    },
     justifyContent: "space-between !important",
     alignItems: "center",
     padding: "10px 50px !important",
@@ -18,16 +22,19 @@ export default makeStyles((theme) => ({
     justifyContent: "start",
   },
   heading: {
-    color: "rgba(0,183,255,1)",
-    textDecoration: "none",
+    color: "rgba(0,23,255,.7)",
+    textDecoration: "none !important",
+    fontWeight: "500 !important",
+    fontFamily: "Edu VIC WA NT Beginner , cursive !important",
+    "&:hover": {
+      color: deepPurple[500],
+    },
   },
   image: {
     marginLeft: "15px",
   },
   toolbar: {
     display: "flex !important",
-    justifyContent: "flex-end",
-    width: "400px",
   },
   profile: {
     display: "flex",
@@ -41,5 +48,12 @@ export default makeStyles((theme) => ({
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
+  },
+  logout: {
+    [theme.breakpoints.down("sm")]: {
+      padding: "3px 5px !important",
+      height: "40px !important",
+      fontSize: "9px !important",
+    },
   },
 }));

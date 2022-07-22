@@ -1,4 +1,4 @@
-import { LOGOUT, SET_USER } from "../constants/actionTypes";
+import { LOGOUT, SET_TOKENS, SET_USER } from "../constants/actionTypes";
 
 export default (user = JSON.parse(localStorage.getItem("user")), action) => {
   switch (action.type) {
@@ -7,6 +7,8 @@ export default (user = JSON.parse(localStorage.getItem("user")), action) => {
     }
     case LOGOUT:
       return (user = null);
+    case SET_TOKENS:
+      return (user = action.payload);
     default:
       return user;
   }
