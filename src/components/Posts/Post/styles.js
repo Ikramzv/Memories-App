@@ -1,6 +1,10 @@
+import { deepOrange, deepPurple } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
+  containerCard: {
+    position: "relative",
+  },
   media: {
     paddingTop: "56.25%",
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -20,6 +24,7 @@ export default makeStyles((theme) => ({
     height: "400px",
     overflowY: "auto !important",
     position: "relative",
+    padding: "0 0 40px 0",
   },
   overlay: {
     position: "absolute",
@@ -36,6 +41,13 @@ export default makeStyles((theme) => ({
   grid: {
     display: "flex",
   },
+  openPost: {
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: deepPurple[200],
+      transitionDuration: theme.transitions.duration.standard,
+    },
+  },
   details: {
     display: "flex",
     justifyContent: "space-between",
@@ -45,8 +57,13 @@ export default makeStyles((theme) => ({
     padding: "0 16px",
   },
   cardActions: {
-    padding: "0 16px 8px 16px !important",
+    padding: "2px 16px 5px 16px !important",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
     display: "flex",
+    width: "100%",
     justifyContent: "space-between",
+    backgroundColor: "#fff",
   },
 }));

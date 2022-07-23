@@ -5,9 +5,11 @@ import {
   LIKE,
   UPDATE,
   FETCH_BY_SEARCH,
+  FETCH_POST,
+  COMMENT,
 } from "../constants/actionTypes";
 
-export default (state = [], action) => {
+export default (state = { posts: [] }, action) => {
   switch (action.type) {
     case FETCH_ALL:
       return {
@@ -15,6 +17,11 @@ export default (state = [], action) => {
         posts: action.payload.data,
         currentPage: action.payload.currentPage,
         numberOfPages: action.payload.numberOfPages,
+      };
+    case FETCH_POST:
+      return {
+        ...state,
+        post: action.payload,
       };
     case FETCH_BY_SEARCH:
       return {
@@ -44,6 +51,14 @@ export default (state = [], action) => {
         posts: state.posts.map((post) =>
           post._id === action.payload._id ? action.payload : post
         ),
+      };
+    case COMMENT:
+      return {
+        ...state,
+        posts: state.posts.map((post) => {
+          if (post._id === action.payload._id) return action.payload;
+          return post;
+        }),
       };
     default:
       return state;

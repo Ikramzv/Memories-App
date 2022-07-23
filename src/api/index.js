@@ -45,14 +45,15 @@ API.interceptors.request.use(
   (err) => Promise.reject(err)
 );
 
-API.interceptors.response.use(
-  (res) => res,
-  async (err) => {
-    Promise.reject(err);
-  }
-);
+// API.interceptors.response.use(
+//   (res) => res,
+//   async (err) => {
+//     Promise.reject(err);
+//   }
+// );
 
 export const fetchPosts = async (page) => await API.get(`/posts?page=${page}`);
+export const fetchPost = async (id) => await API.get(`/posts/find/${id}`);
 export const fetchPostsBySearch = async (searchQuery) =>
   await API.get(
     `/posts/search?searchQuery=${searchQuery.search || "none"}&tags=${
@@ -65,6 +66,8 @@ export const updatePost = async (id, updatedPost) =>
 
 export const deletePost = async (id) => await API.delete(`/posts/${id}`);
 export const likePost = async (id) => await API.patch(`/posts/${id}/likePost`);
+export const comment = async (value, id) =>
+  await API.post(`/posts/${id}`, { value });
 
 export const registerUser = async (newUser) =>
   await API.post(`/user/register`, newUser);

@@ -8,9 +8,7 @@ const Posts = ({ setCurrentId }) => {
   const classes = useStyles();
   const posts = useSelector((state) => state.posts.posts);
   const loading = useSelector((state) => state.loading);
-  useEffect(() => {
-    console.log(posts);
-  }, [posts, loading]);
+  useEffect(() => {}, [posts, loading]);
   return (
     <>
       {loading && (

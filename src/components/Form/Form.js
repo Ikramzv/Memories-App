@@ -4,6 +4,7 @@ import Filebase from "react-file-base64";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, updatedPost } from "../../actions/posts";
+import { useNavigate } from "react-router-dom";
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({
@@ -14,7 +15,7 @@ const Form = ({ currentId, setCurrentId }) => {
   });
 
   const post = useSelector((state) =>
-    currentId ? state.posts.find((post) => post._id === currentId) : ""
+    currentId ? state.posts.posts.find((post) => post._id === currentId) : ""
   );
 
   const user = useSelector((state) => state.user);
@@ -22,6 +23,7 @@ const Form = ({ currentId, setCurrentId }) => {
   const dispatch = useDispatch();
 
   const classes = useStyles();
+  const navigate = useNavigate();
 
   const clear = () => {
     setPostData({
@@ -38,7 +40,12 @@ const Form = ({ currentId, setCurrentId }) => {
     if (currentId) {
       dispatch(updatedPost(currentId, { ...postData, name: user.name }));
     } else {
-      dispatch(createPost({ ...postData, name: user.name }));
+      if (Object.entries(postData).find(([key, value]) => value === "")) {
+        return alert(
+          "Please fullfill all the possible field and then post the memorie"
+        );
+      }
+      dispatch(createPost({ ...postData, name: user.name }, navigate));
     }
     clear();
   };
@@ -51,7 +58,7 @@ const Form = ({ currentId, setCurrentId }) => {
 
   if (!user) {
     return (
-      <Paper className={classes.paper}>
+      <Paper className={classes.paper} elevation={6}>
         <Typography variant="h5" align="center">
           Please sign in to create your own memories and like other's memories.
         </Typography>
@@ -60,7 +67,7 @@ const Form = ({ currentId, setCurrentId }) => {
   }
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} elevation={6}>
       <form
         autoComplete="off"
         noValidate

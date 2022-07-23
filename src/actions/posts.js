@@ -7,6 +7,9 @@ import {
   DELETE,
   CREATE,
   FETCH_BY_SEARCH,
+  FETCH_POST,
+  COMMENT,
+  LOGOUT,
 } from "../constants/actionTypes";
 
 // Action creators
@@ -18,51 +21,78 @@ export const getPosts = (page) => async (dispatch) => {
   });
   try {
     const { data } = await api.fetchPosts(page);
-    console.log(data);
     dispatch({
       type: FETCH_ALL,
       payload: data,
     });
-    dispatch({
-      type: SET_LOADING,
-      payload: false,
-    });
   } catch (err) {
     console.log(err);
   }
+  dispatch({
+    type: SET_LOADING,
+    payload: false,
+  });
 };
 
-export const getPostBySearch = (searchQuery) => async (dispatch) => {
+export const getPost = (id) => async (dispatch) => {
+  dispatch({
+    type: SET_LOADING,
+    payload: true,
+  });
   try {
-    const { data } = await api.fetchPostsBySearch(searchQuery);
+    const { data } = await api.fetchPost(id);
     dispatch({
-      type: FETCH_BY_SEARCH,
-      payload: data.data,
+      type: FETCH_POST,
+      payload: data,
     });
   } catch (err) {
     Promise.reject(err);
   }
+  dispatch({
+    type: SET_LOADING,
+    payload: false,
+  });
 };
 
-export const createPost = (post) => async (dispatch) => {
+export const getPostBySearch = (searchQuery) => async (dispatch) => {
+  dispatch({
+    type: SET_LOADING,
+    payload: true,
+  });
+  try {
+    const { data } = await api.fetchPostsBySearch(searchQuery);
+    dispatch({
+      type: FETCH_BY_SEARCH,
+      payload: data,
+    });
+  } catch (err) {
+    Promise.reject(err);
+  }
+  dispatch({
+    type: SET_LOADING,
+    payload: false,
+  });
+};
+
+export const createPost = (post, navigate) => async (dispatch) => {
   dispatch({
     type: SET_LOADING,
     payload: true,
   });
   try {
     const { data } = await api.createPost(post);
-    console.log(data);
     dispatch({
       type: CREATE,
       payload: data,
     });
-    dispatch({
-      type: SET_LOADING,
-      payload: false,
-    });
+    navigate("/posts/" + data._id);
   } catch (err) {
     console.log(err);
   }
+  dispatch({
+    type: SET_LOADING,
+    payload: false,
+  });
 };
 
 export const updatedPost = (id, updatedPost) => async (dispatch) => {
@@ -76,13 +106,13 @@ export const updatedPost = (id, updatedPost) => async (dispatch) => {
       type: UPDATE,
       payload: data,
     });
-    dispatch({
-      type: SET_LOADING,
-      payload: false,
-    });
   } catch (err) {
     console.log("Error while updating post");
   }
+  dispatch({
+    type: SET_LOADING,
+    payload: false,
+  });
 };
 
 export const deletePost = (id) => async (dispatch) => {
@@ -97,13 +127,13 @@ export const deletePost = (id) => async (dispatch) => {
       type: DELETE,
       payload: id,
     });
-    dispatch({
-      type: SET_LOADING,
-      payload: false,
-    });
   } catch (err) {
     Promise.reject(err);
   }
+  dispatch({
+    type: SET_LOADING,
+    payload: false,
+  });
 };
 
 export const like = (id) => async (dispatch) => {
@@ -115,5 +145,18 @@ export const like = (id) => async (dispatch) => {
     });
   } catch (err) {
     Promise.reject(err);
+  }
+};
+
+export const commentPost = (value, id) => async (dispatch) => {
+  try {
+    const { data } = await api.comment(value, id);
+    dispatch({
+      type: COMMENT,
+      payload: data,
+    });
+    return data.comment;
+  } catch (error) {
+    alert(error.response.data);
   }
 };

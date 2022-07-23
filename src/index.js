@@ -12,7 +12,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const theme = createTheme({});
+const theme = createTheme({
+  transitions: {
+    duration: {
+      standard: "500ms",
+    },
+  },
+});
 
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 

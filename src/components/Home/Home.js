@@ -1,4 +1,4 @@
-import { Container, Grid, Grow } from "@mui/material";
+import { Container, Grid, Grow, InputAdornment } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Posts from "../../components/Posts/Posts";
 import Form from "../../components/Form/Form";
@@ -75,6 +75,7 @@ function Home() {
                 fullWidth
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                type="search"
               />
               <TagsInput
                 style={{
@@ -96,9 +97,11 @@ function Home() {
               </Button>
             </AppBar>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            <Paper elevation={6} style={{ marginTop: "10px" }}>
-              <Pagination page={page} />
-            </Paper>
+            {!searchQuery && !tags.length && (
+              <Paper elevation={6} style={{ marginTop: "10px" }}>
+                <Pagination page={page} />
+              </Paper>
+            )}
           </Grid>
         </Grid>
       </Container>
