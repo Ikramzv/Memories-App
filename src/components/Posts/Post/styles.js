@@ -65,5 +65,7 @@ export default makeStyles((theme) => ({
     width: "100%",
     justifyContent: "space-between",
     backgroundColor: "#fff",
+    borderBottomLeftRadius: '15px !important',
+    borderBottomRightRadius: '15px !important',
   },
 }));

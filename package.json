@@ -2,7 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5000/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -19,6 +19,9 @@
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "downshift": "^6.1.7",
+    "firebase": "^9.9.1",
+    "firebase-tools": "^11.3.0",
+    "http-proxy-middleware": "^2.0.6",
     "jspdf": "^2.5.1",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.4",

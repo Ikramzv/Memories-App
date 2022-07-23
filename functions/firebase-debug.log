@@ -1,0 +1,205 @@
+[debug] [2022-07-23T10:22:13.651Z] ----------------------------------------------------------------------
+[debug] [2022-07-23T10:22:13.655Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hp\Desktop\MERN STACK APP\project\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2022-07-23T10:22:13.656Z] CLI Version:   11.3.0
+[debug] [2022-07-23T10:22:13.656Z] Platform:      win32
+[debug] [2022-07-23T10:22:13.656Z] Node Version:  v16.14.2
+[debug] [2022-07-23T10:22:13.657Z] Time:          Sat Jul 23 2022 14:22:13 GMT+0400 (Azerbaycan Standart Saati)
+[debug] [2022-07-23T10:22:13.658Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-23T10:22:13.739Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-23T10:22:13.739Z] > authorizing via signed-in user (zulfuqarli.ikram0101@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-07-23T10:22:13.826Z] [hub] writing locator at C:\Users\Hp\AppData\Local\Temp\hub-memories-app-b0e8f.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-07-23T10:22:13.902Z] defaultcredentials: writing to file C:\Users\Hp\AppData\Roaming\firebase\zulfuqarli_ikram0101_gmail.com_application_default_credentials.json
+[debug] [2022-07-23T10:22:13.904Z] Setting GAC to C:\Users\Hp\AppData\Roaming\firebase\zulfuqarli_ikram0101_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Hp\\AppData\\Roaming\\firebase\\zulfuqarli_ikram0101_gmail.com_application_default_credentials.json"}}
+[debug] [2022-07-23T10:22:13.907Z] > refreshing access token with scopes: []
+[debug] [2022-07-23T10:22:13.910Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-07-23T10:22:13.910Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-23T10:22:14.244Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-07-23T10:22:14.244Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-07-23T10:22:14.260Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/memories-app-b0e8f/adminSdkConfig [none]
+[debug] [2022-07-23T10:22:14.855Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/memories-app-b0e8f/adminSdkConfig 200
+[debug] [2022-07-23T10:22:14.856Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/memories-app-b0e8f/adminSdkConfig {"projectId":"memories-app-b0e8f","storageBucket":"memories-app-b0e8f.appspot.com"}
+[debug] [2022-07-23T10:22:14.887Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-07-23T10:22:14.887Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-07-23T10:22:14.887Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Hp\\.cache\\firebase\\emulators\\ui-v1.8.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Hp\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.8.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-07-23T10:22:15.055Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-07-23T10:22:15.056Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-07-23T10:22:15.062Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-07-23T10:22:15.200Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\Hp\Desktop\MERN STACK APP\project\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\" for Cloud Functions..."}}
+[debug] [2022-07-23T10:22:15.436Z] Validating nodejs source
+[debug] [2022-07-23T10:22:18.938Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true,
+  "proxy": "http://localhost:3000/"
+}
+[debug] [2022-07-23T10:22:18.939Z] Building nodejs source
+[debug] [2022-07-23T10:22:18.939Z] Analyzing nodejs backend spec
+[debug] [2022-07-23T10:22:18.943Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-07-23T10:22:19.424Z] Serving at port 9005
+
+[debug] [2022-07-23T10:22:20.067Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-07-23T10:22:20.085Z] shutdown requested via /__/quitquitquit
+
+[debug] [2022-07-23T10:22:21.817Z] MONGODB connected
+
+[info] +  functions[us-central1-app]: http function initialized (http://localhost:5001/memories-app-b0e8f/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/memories-app-b0e8f/us-central1/app)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-07-23T10:27:03.036Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-07-23T10:27:03.038Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-07-23T10:27:03.038Z] Accepted request GET /memories-app-b0e8f/us-central1/app/posts?page=1 --> us-central1-app
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-07-23T10:27:03.084Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-07-23T10:27:03.085Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-07-23T10:27:03.085Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-07-23T10:27:03.086Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY"}}
+[debug] [2022-07-23T10:27:05.307Z] [runtime-status] [6704] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:05.310Z] [runtime-status] [6704] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:05.312Z] [runtime-status] [6704] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-07-23T10:27:05.313Z] [runtime-status] [6704] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:05.437Z] [runtime-status] [6704] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-07-23T10:27:05.439Z] [runtime-status] [6704] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-07-23T10:27:05.439Z] [runtime-status] [6704] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:05.440Z] [runtime-status] [6704] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:05.440Z] [runtime-status] [6704] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:05.442Z] [runtime-status] [6704] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-07-23T10:27:05.444Z] [runtime-status] [6704] Functions runtime initialized. {"cwd":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions","node_version":"16.14.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\",\"node_version\":\"16.14.2\"}"}}
+[debug] [2022-07-23T10:27:06.258Z] [runtime-status] [6704] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-07-23T10:27:06.262Z] [runtime-status] [6704] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Running app in signature http"}}
+[debug] [2022-07-23T10:27:06.263Z] [runtime-status] [6704] Attempting to listen to port: \\?\pipe\fire_emu_8304e426d0804d64 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Attempting to listen to port: \\\\?\\pipe\\fire_emu_8304e426d0804d64"}}
+[debug] [2022-07-23T10:27:06.318Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-07-23T10:27:06.321Z] [functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts?page=1, mapping to path=/posts?page=1 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts?page=1, mapping to path=/posts?page=1"}}
+[debug] [2022-07-23T10:27:06.336Z] [runtime-status] [6704] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server handling GET request"}}
+[debug] [2022-07-23T10:27:06.337Z] [runtime-status] [6704] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server survived."}}
+[debug] [2022-07-23T10:27:07.591Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-07-23T10:27:07.591Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-07-23T10:27:07.592Z] Accepted request GET /memories-app-b0e8f/us-central1/app --> us-central1-app
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-07-23T10:27:07.615Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-07-23T10:27:07.615Z] [worker-pool] Adding worker with key us-central1-app, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=2"}}
+[debug] [2022-07-23T10:27:07.616Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-07-23T10:27:07.616Z] [worker-us-central1-app-16010a90-795f-461e-9d92-a4756e510cf5]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-16010a90-795f-461e-9d92-a4756e510cf5]: BUSY"}}
+[info] >  MONGODB connected {"user":"MONGODB connected","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m MONGODB connected"}}
+[debug] [2022-07-23T10:27:09.239Z] [runtime-status] [15584] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:09.241Z] [runtime-status] [15584] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:09.242Z] [runtime-status] [15584] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-07-23T10:27:09.244Z] [runtime-status] [15584] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[info] i  functions: Finished "app" in ~3s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~3s"}}
+[debug] [2022-07-23T10:27:09.301Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE"}}
+[debug] [2022-07-23T10:27:09.303Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-07-23T10:27:09.330Z] [runtime-status] [15584] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-07-23T10:27:09.331Z] [runtime-status] [15584] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-07-23T10:27:09.331Z] [runtime-status] [15584] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:09.333Z] [runtime-status] [15584] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:09.333Z] [runtime-status] [15584] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-07-23T10:27:09.334Z] [runtime-status] [15584] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-07-23T10:27:09.335Z] [runtime-status] [15584] Functions runtime initialized. {"cwd":"C:\\Users\\Hp\\Desktop\\MERN STACK APP\\project\\functions","node_version":"16.14.2"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Hp\\\\Desktop\\\\MERN STACK APP\\\\project\\\\functions\",\"node_version\":\"16.14.2\"}"}}
+[debug] [2022-07-23T10:27:10.011Z] [runtime-status] [15584] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-07-23T10:27:10.013Z] [runtime-status] [15584] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Running app in signature http"}}
+[debug] [2022-07-23T10:27:10.015Z] [runtime-status] [15584] Attempting to listen to port: \\?\pipe\fire_emu_a1b9d7e0a920c0f3 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Attempting to listen to port: \\\\?\\pipe\\fire_emu_a1b9d7e0a920c0f3"}}
+[debug] [2022-07-23T10:27:10.068Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-07-23T10:27:10.069Z] [functions] Got req.url=/memories-app-b0e8f/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/memories-app-b0e8f/us-central1/app, mapping to path=/"}}
+[debug] [2022-07-23T10:27:10.073Z] [runtime-status] [15584] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Ephemeral server handling GET request"}}
+[debug] [2022-07-23T10:27:10.081Z] [runtime-status] [15584] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [15584] Ephemeral server survived."}}
+[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~1s"}}
+[debug] [2022-07-23T10:27:10.085Z] [worker-us-central1-app-16010a90-795f-461e-9d92-a4756e510cf5]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-16010a90-795f-461e-9d92-a4756e510cf5]: IDLE"}}
+[debug] [2022-07-23T10:27:10.085Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  MONGODB connected {"user":"MONGODB connected","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m MONGODB connected"}}
+[debug] [2022-07-23T10:27:14.218Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-07-23T10:27:14.218Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-07-23T10:27:14.219Z] Accepted request GET /memories-app-b0e8f/us-central1/app/posts/find/62da48007b6754bcdca49276 --> us-central1-app
+[debug] [2022-07-23T10:27:14.219Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-07-23T10:27:14.219Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY"}}
+[debug] [2022-07-23T10:27:14.223Z] [runtime-status] [6704] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-07-23T10:27:14.226Z] [runtime-status] [6704] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Running app in signature http"}}
+[debug] [2022-07-23T10:27:14.227Z] [runtime-status] [6704] Attempting to listen to port: \\?\pipe\fire_emu_8304e426d0804d64 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Attempting to listen to port: \\\\?\\pipe\\fire_emu_8304e426d0804d64"}}
+[debug] [2022-07-23T10:27:14.344Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-07-23T10:27:14.345Z] [functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts/find/62da48007b6754bcdca49276, mapping to path=/posts/find/62da48007b6754bcdca49276 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts/find/62da48007b6754bcdca49276, mapping to path=/posts/find/62da48007b6754bcdca49276"}}
+[debug] [2022-07-23T10:27:14.349Z] [runtime-status] [6704] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server handling GET request"}}
+[debug] [2022-07-23T10:27:14.352Z] [runtime-status] [6704] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server survived."}}
+[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~1s"}}
+[debug] [2022-07-23T10:27:14.452Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE"}}
+[debug] [2022-07-23T10:27:14.453Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-07-23T10:27:14.495Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-07-23T10:27:14.497Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-07-23T10:27:14.498Z] Accepted request GET /memories-app-b0e8f/us-central1/app/posts/search?searchQuery=none&tags=nyc,usa,america,newYork --> us-central1-app
+[debug] [2022-07-23T10:27:14.498Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-07-23T10:27:14.499Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY"}}
+[debug] [2022-07-23T10:27:14.501Z] [runtime-status] [6704] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-07-23T10:27:14.504Z] [runtime-status] [6704] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Running app in signature http"}}
+[debug] [2022-07-23T10:27:14.505Z] [runtime-status] [6704] Attempting to listen to port: \\?\pipe\fire_emu_8304e426d0804d64 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Attempting to listen to port: \\\\?\\pipe\\fire_emu_8304e426d0804d64"}}
+[debug] [2022-07-23T10:27:14.625Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-07-23T10:27:14.626Z] [functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts/search?searchQuery=none&tags=nyc,usa,america,newYork, mapping to path=/posts/search?searchQuery=none&tags=nyc,usa,america,newYork {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts/search?searchQuery=none&tags=nyc,usa,america,newYork, mapping to path=/posts/search?searchQuery=none&tags=nyc,usa,america,newYork"}}
+[debug] [2022-07-23T10:27:14.630Z] [runtime-status] [6704] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server handling GET request"}}
+[debug] [2022-07-23T10:27:14.632Z] [runtime-status] [6704] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server survived."}}
+[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~1s"}}
+[debug] [2022-07-23T10:27:14.815Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE"}}
+[debug] [2022-07-23T10:27:14.815Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-07-23T10:27:16.079Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-07-23T10:27:16.081Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-07-23T10:27:16.082Z] Accepted request GET /memories-app-b0e8f/us-central1/app/posts?page=1 --> us-central1-app
+[debug] [2022-07-23T10:27:16.082Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-07-23T10:27:16.082Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: BUSY"}}
+[debug] [2022-07-23T10:27:16.085Z] [runtime-status] [6704] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-07-23T10:27:16.087Z] [runtime-status] [6704] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Running app in signature http"}}
+[debug] [2022-07-23T10:27:16.087Z] [runtime-status] [6704] Attempting to listen to port: \\?\pipe\fire_emu_8304e426d0804d64 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Attempting to listen to port: \\\\?\\pipe\\fire_emu_8304e426d0804d64"}}
+[debug] [2022-07-23T10:27:16.208Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-07-23T10:27:16.209Z] [functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts?page=1, mapping to path=/posts?page=1 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/memories-app-b0e8f/us-central1/app/posts?page=1, mapping to path=/posts?page=1"}}
+[debug] [2022-07-23T10:27:16.214Z] [runtime-status] [6704] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server handling GET request"}}
+[debug] [2022-07-23T10:27:16.215Z] [runtime-status] [6704] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [6704] Ephemeral server survived."}}
+[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~1s"}}
+[debug] [2022-07-23T10:27:16.648Z] [worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-ee538836-0528-4dc1-b65a-bcfc3d5c9e8e]: IDLE"}}
+[debug] [2022-07-23T10:27:16.649Z] [work-queue] {"queueLength":0,"workRunningCount":0}
