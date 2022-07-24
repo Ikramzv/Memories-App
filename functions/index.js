@@ -8,8 +8,14 @@ const cors = require("cors");
 
 const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/user");
+const { onRequest } = require("firebase-functions/v1/https");
 
-app.use(cors())
+app.use(cors({origin: true}))
+app.use((req,res,next) => {
+  res.set('Access-Control-Allow-Origin' , '*')
+  res.set('Access-Control-Allow-Headers' , 'Content-type')
+  next()
+})
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -27,4 +33,4 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log("MONGODB connected");
 }).catch((err) => console.log(err));
 
-exports.api = functions.https.onRequest(app);
+exports.api = onRequest(app)

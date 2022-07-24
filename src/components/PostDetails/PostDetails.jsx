@@ -80,10 +80,6 @@ function PostDetails() {
               {moment(post?.createdAt, "DD.MM.YYYY hh:mm:ss").fromNow()}
             </Typography>
             <Divider style={{ margin: "20px 0" }} />
-            <Typography variant="body1">
-              <strong>Realtime chat - coming soon!</strong>
-            </Typography>
-            <Divider style={{ margin: "20px 0" }} />
             <CommentSection post={post} />
             <Divider style={{ margin: "20px 0" }} />
           </div>

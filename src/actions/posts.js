@@ -9,7 +9,6 @@ import {
   FETCH_BY_SEARCH,
   FETCH_POST,
   COMMENT,
-  LOGOUT,
 } from "../constants/actionTypes";
 
 // Action creators
