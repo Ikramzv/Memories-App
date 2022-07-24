@@ -2,7 +2,7 @@ import axios from "axios";
 import decode from "jwt-decode";
 
 const API = axios.create({
-  baseURL: "https://us-central1-memories-app-b0e8f.cloudfunctions.net/api/",
+  baseURL: "http://localhost:5001/memories-app-b0e8f/us-central1/api", // https://us-central1-memories-app-b0e8f.cloudfunctions.net/api/
 });
 
 const instance = axios.create({});
@@ -14,7 +14,7 @@ const instance = axios.create({});
 async function generateRefershToken() {
   const user = JSON.parse(localStorage.getItem("user"));
   const { data } = await instance.post(
-    "https://us-central1-memories-app-b0e8f.cloudfunctions.net/api/user/refresh",
+    "http://localhost:5001/memories-app-b0e8f/us-central1/api/user/refresh",
     {
       refreshToken: user.refreshToken,
     }
