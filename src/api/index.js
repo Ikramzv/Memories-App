@@ -1,8 +1,8 @@
 import axios from "axios";
 import decode from "jwt-decode";
 
-export const API = axios.create({
-  baseURL: "http://localhost:5001/memories-app-b0e8f/us-central1/app",
+const API = axios.create({
+  baseURL: "http://localhost:5001/memories-app-b0e8f/us-central1/api",
 });
 
 const instance = axios.create({});
@@ -14,7 +14,7 @@ const instance = axios.create({});
 async function generateRefershToken() {
   const user = JSON.parse(localStorage.getItem("user"));
   const { data } = await instance.post(
-    "http://localhost:5001/memories-app-b0e8f/us-central1/app/user/refresh",
+    "http://localhost:5001/memories-app-b0e8f/us-central1/api/user/refresh",
     {
       refreshToken: user.refreshToken,
     }

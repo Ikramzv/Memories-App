@@ -28,6 +28,5 @@
     "eslint-config-google": "^0.14.0",
     "firebase-functions-test": "^0.2.0"
   },
-  "private": true,
-  "proxy": "http://localhost:3000/"
+  "private": true
 }
